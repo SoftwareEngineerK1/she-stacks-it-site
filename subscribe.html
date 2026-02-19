@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscribe - SheStacksIt</title>
+    <title>Join the Community | SheStacksIt</title>
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Join the Inner Circle</h2>
-        <p>Get exclusive guides and tech-stack tips delivered to your inbox.</p>
-        
-        <form name="newsletter" method="POST" data-netlify="true">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <button type="submit">Subscribe Now</button>
-        </form>
-        
-        <a href="index.html" class="back-link">← Back to Home</a>
-    </div>
+    <nav>
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">SheStacksIt</a></div>
+        <a href="index.html" class="nav-btn">Back to Home</a>
+    </nav>
+
+    <section class="subscribe-container">
+        <div class="form-card">
+            <h2>Start Stacking.</h2>
+            <p>Join our newsletter for weekly insights on tech careers and wealth building.</p>
+            
+            <form action="#" method="POST" class="stack-form">
+                <div class="input-group">
+                    <label for="name">First Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <button type="submit" class="cta-button">Secure My Spot</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
