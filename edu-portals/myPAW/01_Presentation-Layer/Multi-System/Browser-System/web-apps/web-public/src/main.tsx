@@ -57,7 +57,8 @@ function Shell() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(...);
+
   <React.StrictMode>
     <BrowserRouter basename={BASE}>
       <Shell />
