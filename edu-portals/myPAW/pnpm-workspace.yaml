@@ -1,4 +1,9 @@
 packages:
-  - "01_Presentation-Layer/Multi-System/Browser-System/web-apps/*"
-  - "01_Presentation-Layer/Multi-System/Handheld-System/mobile-apps/*"
-  - "packages/*"
+  # 1. Your core presentation layout web applications
+  - '01_Presentation-Layer/Multi-System/Browser-System/web-apps/*'
+
+  # 2. Your handheld mobile application environment 
+  - '01_Presentation-Layer/Multi-System/Handheld-System/mobile-apps/*'
+
+  # 3. Your shared internal modules, APIs, utilities, or component design systems
+  - 'packages/*'
