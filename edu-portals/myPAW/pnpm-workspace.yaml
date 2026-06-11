@@ -1,0 +1,4 @@
+packages:
+  - "01_Presentation-Layer/Multi-System/Browser-System/web-apps/*"
+  - "01_Presentation-Layer/Multi-System/Handheld-System/mobile-apps/*"
+  - "packages/*"
