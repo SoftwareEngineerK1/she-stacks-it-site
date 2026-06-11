@@ -8,10 +8,5 @@
     "build": "pnpm --filter @mypaw/web-public build",
     "preview": "pnpm --filter @mypaw/web-public preview",
     "lint": "pnpm --filter @mypaw/web-public lint"
-  },
-  "workspaces": [
-    "01_Presentation-Layer/Multi-System/Browser-System/web-apps/*",
-    "01_Presentation-Layer/Multi-System/Handheld-System/mobile-apps/*",
-    "packages/*"
-  ]
+  }
 }
