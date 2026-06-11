@@ -1,5 +1,1 @@
-# 1. Directly look for built React assets where the pipeline compiled them
-/edu-portals/myPAW/assets/*  /assets/:splat  200
-
-# 2. Hand off all deep inner router paths (like /profile) to the client-side engine
-/edu-portals/myPAW/*         /index.html  200
+/edu-portals/myPAW/*  /edu-portals/myPAW/index.html  200
