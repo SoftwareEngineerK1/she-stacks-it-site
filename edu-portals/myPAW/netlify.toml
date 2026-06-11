@@ -1,0 +1,17 @@
+[build]
+  command = "pnpm install && pnpm build"
+  publish = "01_Presentation-Layer/Multi-System/Browser-System/web-apps/web-public/dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/edu-portals/myPAW/*"
+  to = "/edu-portals/myPAW/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
