@@ -1,19 +1,28 @@
 [build]
-  # Tell Netlify where the sub-project lives relative to the git repository root
-  base = "edu-portals/myPAW"
+  # Leave base empty if your Netlify dashboard UI already targets "edu-portals/myPAW"
+  # This prevents Netlify from searching for "edu-portals/myPAW/edu-portals/myPAW"
+  base = ""
+  
+  # Compiles your React web app
   command = "pnpm install && pnpm build"
+  
+  # Correct relative path from the myPAW/ directory to your compiled code
   publish = "01_Presentation-Layer/Multi-System/Browser-System/web-apps/web-public/dist"
+  
+  # Correct path to your serverless backend code
   functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "20"
 
 [[redirects]]
-  from = "/edu-portals/myPAW/*"
-  to = "/edu-portals/myPAW/index.html"
+  # Triggers when a user reloads an internal React route like /profile
+  from = "/*"
+  to = "/index.html"
   status = 200
 
 [[redirects]]
+  # Forwards your frontend api requests seamlessly to your backend functions
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
