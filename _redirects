@@ -1,1 +1,2 @@
-/edu-portals/myPAW/*  /edu-portals/myPAW/01_Presentation-Layer/Multi-System/Browser-System/web-apps/web-public/:splat  200
+# Route all deep subfolder assets, src files, and pages straight to myPAW
+/edu-portals/myPAW/*  /edu-portals/myPAW/:splat  200
