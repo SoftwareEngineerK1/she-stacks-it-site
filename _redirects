@@ -1,1 +1,5 @@
-/edu-portals/myPAW/*  /edu-portals/myPAW/:splat  200
+# 1. Forward asset subfolder lookups directly to where your build pipeline unzips them
+/edu-portals/myPAW/assets/*  /edu-portals/myPAW/assets/:splat  200
+
+# 2. Allow all main navigation routing to land on the app entry bundle
+/edu-portals/myPAW/*         /edu-portals/myPAW/index.html  200
