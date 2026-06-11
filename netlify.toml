@@ -1,0 +1,19 @@
+[build]
+  # Tell Netlify to execute everything from your deep web-public folder
+  base = "edu-portals/myPAW/01_Presentation-Layer/Multi-System/Browser-System/web-apps/web-public"
+  
+  # The exact build command from your package.json
+  command = "pnpm install && pnpm build"
+  
+  # Tell Netlify that the compiled files live in the dist folder inside web-public
+  publish = "dist"
+
+[functions]
+  # This lets your serverless functions look back at the root or a custom path if needed
+  directory = "../../../../../../../netlify/functions"
+
+[[redirects]]
+  # This fixes internal React Router refreshes (like /profile) inside Netlify
+  from = "/*"
+  to = "/index.html"
+  status = 200
