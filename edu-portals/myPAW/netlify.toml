@@ -1,4 +1,6 @@
 [build]
+  # Tell Netlify where the sub-project lives relative to the git repository root
+  base = "edu-portals/myPAW"
   command = "pnpm install && pnpm build"
   publish = "01_Presentation-Layer/Multi-System/Browser-System/web-apps/web-public/dist"
   functions = "netlify/functions"
