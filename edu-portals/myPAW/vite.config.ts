@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // CRUCIAL: Changes your asset compiling to use relative paths instead of hardcoded strings
+  base: '/edu-portals/myPAW/', // Crucial: This tells Vite to output asset tags that match your redirect routes
   build: {
     outDir: 'dist'
   }
