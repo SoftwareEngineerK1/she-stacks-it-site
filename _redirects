@@ -1,1 +1,5 @@
-/edu-portals/myPAW/*  /edu-portals/myPAW/01_Presentation-Layer/Multi-System/Browser-System/web-apps/web-public/:splat  200
+# 1. Directly intercept and serve static assets out of the web-public compiled dist folder
+/edu-portals/myPAW/assets/*  /edu-portals/myPAW/01_Presentation-Layer/Multi-System/Browser-System/web-apps/web-public/dist/assets/:splat  200
+
+# 2. Map all internal React Router browser paths back to the compiled production index template
+/edu-portals/myPAW/*  /edu-portals/myPAW/01_Presentation-Layer/Multi-System/Browser-System/web-apps/web-public/dist/index.html  200
