@@ -1,19 +1,16 @@
 [build]
-  # This forces Netlify to enter the subfolder from the Git root
-  base = "edu-portals/myPAW"
+  # CRUCIAL: Set base to empty string so Netlify can see your lobby files at the git root
+  base = ""
   
-  # This executes your filtered workspace pnpm script
-  command = "pnpm install && pnpm build"
+  # Tell Netlify to go inside the monorepo folder, run pnpm install, and run the filter build
+  command = "cd edu-portals/myPAW && pnpm install && pnpm build"
   
-  # This overrides the UI and sets the absolute build path relative to the base directory
-  publish = "01_Presentation-Layer/Multi-System/Browser-System/web-apps/web-public/dist"
-
-[functions]
-  # This overrides the functions path relative to the base directory
-  directory = "netlify/functions"
+  # CRUCIAL: Change publish to the root folder. 
+  # Your pnpm build script needs to move its finished files into this path (see Step 2)
+  publish = "."
 
 [[redirects]]
-  # This routes all client-side navigation paths straight to your compiled index layout
-  from = "/*"
-  to = "/index.html"
+  # Route deep browser refreshes (like /profile) straight to the app's index file
+  from = "/edu-portals/myPAW/*"
+  to = "/edu-portals/myPAW/index.html"
   status = 200
