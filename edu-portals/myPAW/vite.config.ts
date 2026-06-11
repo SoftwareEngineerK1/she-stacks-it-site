@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react' // or vue, svelte, etc.
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/edu-portals/myPAW/', // Crucial: matching your public URL path
+  base: './', // CRUCIAL: Changes your asset compiling to use relative paths instead of hardcoded strings
   build: {
-    outDir: 'dist',
+    outDir: 'dist'
   }
 })
