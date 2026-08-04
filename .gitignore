@@ -1,0 +1,141 @@
+# =========================================
+# BMoreFoodies / myPAW — shared .gitignore
+# Stack: pnpm/yarn + Turborepo + Next.js/Vite
+#        + Expo/EAS + Supabase + Netlify + Vercel + Deno
+#
+# .gitignore-template
+# .gitignore-template.txt 
+# =========================================
+
+# ---- Dependencies ----
+node_modules/
+.pnp
+.pnp.*
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.pnpm-store/
+
+# ---- Env & secrets ----
+# Ignore all env files by default, then explicitly un-ignore templates.
+.env
+.env.*
+.env*.local
+!.env.example
+!.env.local.example
+*.pem
+*.key
+.npmrc.local
+.sentryclirc
+
+
+# Env & secrets
+# env files - NEVER COMMIT THESE
+# env files (can opt-in for committing if needed)
+env
+.env.*
+!.env.example
+.env*
+.env
+.env2.example
+.env.local
+.env.development
+.env.development.local
+.env.test.local
+.env.production
+.env.production.local
+.env.*.local
+.env.local.example
+*.pem
+*.key
+
+# ---- Logs ----
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---- Build outputs ----
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.nuxt/
+.output/
+*.local
+next-env.d.ts
+
+# ---- Turborepo ----
+.turbo/
+
+# ---- Testing ----
+coverage/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.pytest_cache/
+.mypy_cache/
+
+# ---- TypeScript ----
+*.tsbuildinfo
+
+# ---- Expo / React Native / EAS ----
+.expo/
+.expo-shared/
+web-build/
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+*.orig.*
+ios/Pods/
+ios/build/
+android/.gradle/
+android/app/build/
+android/build/
+
+# ---- Supabase ----
+supabase/.branches/
+supabase/.temp/
+
+# ---- Deno ----
+.deno/
+
+# ---- Deployment ----
+.vercel/
+.netlify/
+
+# ---- ngrok ----
+ngrok.yml
+ngrok.yaml
+
+# ---- Editor ----
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Stray duplicate files (accidental "copy" uploads) ----
+*copy.*
+*Copy.*
+*(*).*
+* copy.*
+* - Copy.*
+* (*).*
+
+# ---- Misc ----
+.gitkeep
